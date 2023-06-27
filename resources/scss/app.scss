@@ -12,7 +12,7 @@ img {
 }
 
 body {
-    background-color: #222;
+    background-color: red;
     color: white;
 }
 
@@ -25,4 +25,44 @@ footer {
 
 header img.logo {
     height: 2rem;
+}
+
+// **************************Header*********************************
+
+#nav_wrapper {
+    background-color: white;
+}
+
+.nav_left {
+    padding: 1rem 0;
+
+    #nav_logo {
+        width: 65px;
+    }
+}
+
+.nav_right {
+    padding: 1rem 0;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+
+    & :hover {
+        opacity: 0.7;
+    }
+}
+
+#jumbo {
+    height: 310px;
+
+}
+
+.carousel_img {
+    object-fit: cover;
+    object-position: top;
+    height: 310px;
+    width: 100%;
+    opacity: 0.6;
 }
