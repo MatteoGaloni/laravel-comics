@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $info = config("comics.my_data");
-    return view('welcome', [$info]);
+    return view('welcome', [
+        "info" => $info
+    ]);
 });
 
-// Route::get('/otherpage', function () {
-//     $data = config('comics.data');
-//     return view('other', "data");
-// });
+Route::get('/otherpage', function () {
+    $data = config('comics.data');
+    return view('other', "data");
+});
