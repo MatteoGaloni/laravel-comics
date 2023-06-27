@@ -20,7 +20,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/otherpage', function () {
-    $data = config('comics.data');
-    return view('other', "data");
+Route::get('/actionComics', function () {
+    $info = config("comics.my_data");
+    return view('actionComics', [
+        "info" => $info
+    ]);
 });

@@ -1,10 +1,4 @@
 <header class="p-3">
-    {{-- <img class="logo" src="{{ Vite::asset('resources/img/logo.png') }}" alt="Laravel Logo">
-    <span>Some links: </span>
-    @foreach ($links as $link)
-        <a href="{{ $link['href'] }}">{{ $link['text'] }}</a>
-    @endforeach --}}
-
     <div id="nav_wrapper" class="d-flex">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="nav_left">
@@ -74,6 +68,4 @@
             </a>
         </div>
     </div>
-
-
 </header>
