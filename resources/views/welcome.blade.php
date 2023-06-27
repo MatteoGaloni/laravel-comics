@@ -1,15 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container my-3">
-    <h1>Welcome Page</h1>
-    <div class="row g-4">
-        <div class="col">
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, delectus ad esse illum omnis earum eligendi sint a minus quasi, inventore nulla autem. Maxime voluptatem eligendi veniam voluptates. Soluta, sunt!</p>
+    <main>
+        <div id="slider_wrapper">
+            <button id="current_btn" class="btn btn-primary border-primary text-white">CURRENT SERIES</button>
+            <div class="container p-2 d-flex flex-wrap">
+                @foreach ($info as $item)
+                    <div class="my_slide p-2">
+                        <div>{{ $item['title'] }}</div>
+
+                    </div>
+                @endforeach
+                {{-- <div v-for="thumb in myJson" class="my_slide p-2">
+                    <img :src="thumb.thumb" alt="icon">
+                    <h6 class="slide_title p-2">{{ thumb . series }}</h6>
+                    <span class="slide_title pl-2">{{ thumb . price }}</span>
+                </div> --}}
+                <button id="load_btn" class="btn btn-primary border-primary text-white">LOAD MORE</button>
             </div>
         </div>
-    </div>
-
-</div>
+    </main>
 @endsection
