@@ -1,41 +1,17 @@
-<header class="p-3">
+<header>
     <div id="nav_wrapper" class="d-flex">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="nav_left">
-                <img id="nav_logo" src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
+                <a href="/"> <img id="nav_logo" src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
+                </a>
             </div>
             <div class="nav_right">
                 <ul class="d-flex list-unstyled">
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
-                    <a class="link p-1" href="">
-                        <li>link</li>
-                    </a>
+                    @foreach ($someLinks as $link)
+                        <a class="link p-1" href="">
+                            <li>{{ $link['text'] }}</li>
+                        </a>
+                    @endforeach
                 </ul>
             </div>
         </div>
